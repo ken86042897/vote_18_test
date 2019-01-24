@@ -1,6 +1,3 @@
-<div>
-  test for codeship
-</div>
 <% @articles.each do |article|%>
 <div class="content">
     標題：<%= article.title %>
@@ -9,9 +6,9 @@
     日期：<%= article.date %>
 </div>
 <div class="media-left">
-	<figure>
-		<%= image_tag article.feature_url.to_s %>
-	</figure>
+  <figure>
+    <%= image_tag article.feature_url.to_s %>
+  </figure>
 
 </div>
 <div class="content has-description">
@@ -23,7 +20,7 @@
   <%=  raw article.body %>
 </div>
 <%=link_to edit_article_path(article),class:'button is-small is-primary is-outlined is-edit' do %>
-	            <i class="fa fa-pencil-square-o">修改</i>
+              <i class="fa fa-pencil-square-o">修改</i>
 <% end %><br>
 <%=link_to article_path(article) do %>
  <i class="fa fa-pencil-square-o">看完整</i>
